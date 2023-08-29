@@ -1,0 +1,5 @@
+package CesarScool.NextSeguros.Entities;
+
+public class Person {
+
+}

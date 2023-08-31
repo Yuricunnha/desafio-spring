@@ -1,0 +1,44 @@
+package entities;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Client {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	@Column(nullable = false)
+	private String name;
+	@Column(nullable = false)
+	private int age;
+	@Column(nullable = false)
+	private int dependents;
+	@Column(nullable = false)
+	private int income;
+	@Column(nullable = false)
+	private String maritalStatus;
+	@Column(nullable = false)
+	private int houses;
+	@Column(nullable = false)
+	private int vehicles;
+	@Column(nullable = false)
+	private LocalDate createAt;
+	@Column(nullable = false)
+	private LocalDate updateAt;
+
+}
